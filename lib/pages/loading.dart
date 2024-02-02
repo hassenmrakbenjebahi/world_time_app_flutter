@@ -10,7 +10,7 @@ class Loading extends StatefulWidget {
 class _LoadingState extends State<Loading> {
 
   void getTime() async {
-    Uri url = Uri.parse("http://worldtimeapi.org/api/timezone/Europe/London");
+    Uri url = Uri.parse("http://worldtimeapi.org/api/timezone/Africa/Tunis");
 
     // make the request
     http.Response response = await http.get(url);
