@@ -6,9 +6,21 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
+
+   final Object? data = ModalRoute.of(context)?.settings.arguments;
+    print(data);
+
     return Scaffold(
+      //appBar: AppBar(),
       body: SafeArea(
         child: Column(
           children: <Widget>[
@@ -20,7 +32,7 @@ class _HomeState extends State<Home> {
               label: Text(
                 'Edit Location'
               )
-            )
+            ),
           ],
         ),
       ),
