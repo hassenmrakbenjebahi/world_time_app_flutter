@@ -11,6 +11,7 @@ class WorldTime {
   WorldTime( this.location, this.flag, this.url , this.time );
 
   Future<void> getTime() async {
+    try{
     Uri uri = Uri.parse('http://worldtimeapi.org/api/timezone/$url');
     // make the request
     http.Response response = await http.get(uri);
@@ -28,8 +29,11 @@ class WorldTime {
 
     // set the time property
     this.time = now.toString();
+
+    }catch(e){
+        print(e);
+    }
   }
 
 }
 
-// WorldTime instance = WorldTime(location: 'Berlin', flag: 'germany.png', url: 'Europe/Berlin');
